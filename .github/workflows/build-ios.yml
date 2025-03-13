@@ -26,7 +26,9 @@ jobs:
             -sdk iphoneos \
             -configuration Release \
             CODE_SIGNING_ALLOWED=NO \
+            INFOPLIST_FILE=Anonycord/Info.plist \
             -derivedDataPath build/
+
 
           mkdir -p Payload
           cp -r build/Build/Products/Release-iphoneos/*.app Payload/
